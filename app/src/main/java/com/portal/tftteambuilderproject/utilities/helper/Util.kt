@@ -1,8 +1,10 @@
 package com.portal.tftteambuilderproject.utilities.helper
 
 import com.portal.tftteambuilder.R
+import java.util.Locale
 
 class Util {
+
 
     enum class Champion(val championName: String, val imagePath: Int) {
         ANNIE("Annie", R.drawable.annie),
@@ -44,7 +46,7 @@ class Util {
         TWISTED_FATE("Twisted Fate", R.drawable.twistedfate),
         JAX("Jax", R.drawable.jax),
         OLAF("Olaf", R.drawable.olaf),
-        K_SANTE("KSante", R.drawable.ksante),
+        K_SANTE("K'Sante", R.drawable.ksante),
         THRESH("Thresh", R.drawable.thresh),
         KENNEN("Kennen", R.drawable.kennen),
         TWITCH("Twitch", R.drawable.twitch),
@@ -67,4 +69,51 @@ class Util {
         YASUO("Yasuo", R.drawable.yasuo),
         SETT("Sett", R.drawable.sett)
     }
+
+    enum class Origin(val feature: String, val imagePath: Int,val triggerFrequency: List<Int>) {
+        EIGHT_BIT("8-Bit", R.drawable.ic_eight_bit, listOf(2,4,6)),
+        COUNTRY("Country", R.drawable.ic_country, listOf(3,5,7)),
+        DISCO("Disco", R.drawable.ic_disco, listOf(3,4,5,6)),
+        EDM("EDM", R.drawable.ic_edm, listOf(2,3,4,5)),
+        EMO("Emo", R.drawable.ic_emo, listOf(2,4,6)),
+        HEARTSTEEL("Heartsteel", R.drawable.ic_heartsteel, listOf(3,5,7,10)),
+        HYPERPOP("Hyperpop", R.drawable.ic_hyperpop, listOf(1,2,3,4)),
+        ILLBEATS("ILLBEATS", R.drawable.ic_illbeats, listOf(1)),
+        JAZZ("Jazz", R.drawable.ic_jazz, listOf(2,3,4)),
+        KDA("K/DA", R.drawable.ic_kda, listOf(3,5,7,10)),
+        MAESTRO("Maestro", R.drawable.ic_maestro, listOf(1)),
+        MIXMASTER("Mixmaster", R.drawable.ic_mixmaster, listOf(1)),
+        PENTAKILL("Pentakill", R.drawable.ic_pentakill, listOf(3,5,7,10)),
+        PUNK("Punk", R.drawable.ic_punk, listOf(2,4,6)),
+        TRUE_DAMAGE("True Damage", R.drawable.ic_true_damage, listOf(2,4,6,9)),
+        WILDCARD("Wildcard", R.drawable.ic_wildcard, listOf(3,5,7)),
+        BIG_SHOT("Big Shot", R.drawable.ic_big_shot, listOf(2,4,6)),
+        BRUISER("Bruiser", R.drawable.ic_bruiser, listOf(2,4,6)),
+        BREAKOUT("Breakout", R.drawable.ic_breakout, listOf(1)),
+        CROWD_DIVER("Crowd Diver", R.drawable.ic_crowd_diver, listOf(2,4,6)),
+        DAZZLER("Dazzler", R.drawable.ic_dazzler, listOf(2,4,6)),
+        EDGELORD("Edgelord", R.drawable.ic_edgelord, listOf(3,5,7)),
+        EXECUTIONER("Executioner", R.drawable.ic_executioner, listOf(2,4,6)),
+        GUARDIAN("Guardian", R.drawable.ic_guardian, listOf(2,4,6)),
+        MOSHER("Mosher", R.drawable.ic_mosher, listOf(2,4,6)),
+        RAPIDFIRE("Rapidfire", R.drawable.ic_rapidfire, listOf(2,4,6)),
+        SENTINEL("Sentinel", R.drawable.ic_sentinel, listOf(2,4,6,8)),
+        SPELLWEAVER("Spellweaver", R.drawable.ic_spellweaver, listOf(3,5,7,10)),
+        SUPERFAN("Superfan", R.drawable.ic_superfan, listOf(3,4,5))
+
+    }
+    companion object {
+        fun countOrigins(origins: List<String>): Map<String, Int> {
+            val originCounts = mutableMapOf<String, Int>().withDefault { 0 }
+            origins.forEach { origin ->
+                originCounts[origin] = originCounts.getValue(origin) + 1
+            }
+            return originCounts
+        }
+
+    const val MAGIC_KEY_FIRST = "%%%"
+    const val MAGIC_KEY_SECOND = "+++"
+    }
+
+
 }

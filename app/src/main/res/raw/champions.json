@@ -2,291 +2,492 @@
   {
     "name": "Annie",
     "cost": 1,
-    "origin": ["Spellweaver","Emo"]
+    "origin": [
+      "Spellweaver",
+      "Emo"
+    ]
   },
   {
     "name": "Corki",
     "cost": 1,
-    "origin": ["Big Shot", "8-bit"]
+    "origin": [
+      "Big Shot",
+      "8-Bit"
+    ]
   },
   {
     "name": "Evelynn",
     "cost": 1,
-    "origin": ["Crowd Diver", "K/DA"]
+    "origin": [
+      "Crowd Diver",
+      "K/DA"
+    ]
   },
   {
     "name": "Jinx",
     "cost": 1,
-    "origin": ["Rapidfire", "Punk"]
+    "origin": [
+      "Rapidfire",
+      "Punk"
+    ]
   },
   {
     "name": "Kennen",
     "cost": 1,
-    "origin": ["Guardian", "Superfan","True Damage"]
+    "origin": [
+      "Guardian",
+      "Superfan",
+      "True Damage"
+    ]
   },
   {
     "name": "Lillia",
     "cost": 1,
-    "origin": ["Sentinel", "Superfan","K/DA"]
-  },
+    "origin": [
+      "Sentinel",
+      "Superfan",
+      "K/DA"
+    ]
+  }, {
+  "name": "K'Sante",
+  "cost": 1,
+  "origin": [
+    "Heartsteel",
+    "Sentinel"
+  ]
+},
   {
     "name": "Nami",
     "cost": 1,
-    "origin": ["Dazzler", "Disco"]
+    "origin": [
+      "Dazzler",
+      "Disco"
+    ]
   },
   {
     "name": "Olaf",
     "cost": 1,
-    "origin": ["Bruiser", "Pentakill"]
+    "origin": [
+      "Bruiser",
+      "Pentakill"
+    ]
   },
   {
     "name": "Tahm Kench",
     "cost": 1,
-    "origin": ["Bruiser", "Country"]
+    "origin": [
+      "Bruiser",
+      "Country"
+    ]
   },
   {
     "name": "Taric",
     "cost": 1,
-    "origin": ["Guardian", "Disco"]
+    "origin": [
+      "Guardian",
+      "Disco"
+    ]
   },
   {
     "name": "Vi",
     "cost": 1,
-    "origin": ["Mosher", "Punk"]
+    "origin": [
+      "Mosher",
+      "Punk"
+    ]
   },
   {
     "name": "Yasuo",
     "cost": 1,
-    "origin": ["Edgelord", "True Damage"]
+    "origin": [
+      "Edgelord",
+      "True Damage"
+    ]
   },
   {
     "name": "Aphelios",
     "cost": 2,
-    "origin": ["Heartsteel","Rapidfire"]
+    "origin": [
+      "Heartsteel",
+      "Rapidfire"
+    ]
   },
   {
     "name": "Bard",
     "cost": 2,
-    "origin": ["Dazzler","Jazz"]
+    "origin": [
+      "Dazzler",
+      "Jazz"
+    ]
   },
   {
     "name": "Garen",
     "cost": 2,
-    "origin": ["Sentinel","8-Bit"]
+    "origin": [
+      "Sentinel",
+      "8-Bit"
+    ]
   },
   {
     "name": "Gnar",
     "cost": 2,
-    "origin": ["Superfan","Pentakill","Mosher"]
+    "origin": [
+      "Superfan",
+      "Pentakill",
+      "Mosher"
+    ]
   },
   {
     "name": "Gragas",
     "cost": 2,
-    "origin": ["Spellweaver","Bruiser","Disco"]
+    "origin": [
+      "Spellweaver",
+      "Bruiser",
+      "Disco"
+    ]
   },
   {
     "name": "Jax",
     "cost": 2,
-    "origin": ["EDM","Mosher"]
+    "origin": [
+      "EDM",
+      "Mosher"
+    ]
   },
   {
     "name": "Kai'sa",
     "cost": 2,
-    "origin": ["KD/A","Big Shot"]
+    "origin": [
+      "K/DA",
+      "Big Shot"
+    ]
   },
   {
     "name": "Katarina",
     "cost": 2,
-    "origin": ["Crowd Diver","Country"]
+    "origin": [
+      "Crowd Diver",
+      "Country"
+    ]
   },
   {
     "name": "Kayle",
     "cost": 2,
-    "origin": ["Pentakill","Edgelord"]
+    "origin": [
+      "Pentakill",
+      "Edgelord"
+    ]
   },
   {
     "name": "Pantheon",
     "cost": 2,
-    "origin": ["Guardian","Punk"]
+    "origin": [
+      "Guardian",
+      "Punk"
+    ]
   },
   {
     "name": "Senna",
     "cost": 2,
-    "origin": ["True Damage","Rapidfire"]
+    "origin": [
+      "True Damage",
+      "Rapidfire"
+    ]
   },
   {
     "name": "Seraphine",
     "cost": 2,
-    "origin": ["KD/A","Spellweaver"]
+    "origin": [
+      "K/DA",
+      "Spellweaver"
+    ]
   },
   {
     "name": "Twitch",
     "cost": 2,
-    "origin": ["Executioner","Punk"]
+    "origin": [
+      "Executioner",
+      "Punk"
+    ]
   },
   {
     "name": "Amumu",
     "cost": 3,
-    "origin": ["Guardian","Emo"]
+    "origin": [
+      "Guardian",
+      "Emo"
+    ]
   },
   {
     "name": "Ekko",
     "cost": 3,
-    "origin": ["True Damage","Sentinel","Spellweaver"]
+    "origin": [
+      "True Damage",
+      "Sentinel",
+      "Spellweaver"
+    ]
   },
   {
     "name": "Lulu",
     "cost": 3,
-    "origin": ["Hyberpop","Spellweaver"]
+    "origin": [
+      "Hyperpop",
+      "Spellweaver"
+    ]
   },
   {
     "name": "Lux",
     "cost": 3,
-    "origin": ["Dazzler","EDM"]
+    "origin": [
+      "Dazzler",
+      "EDM"
+    ]
   },
   {
     "name": "Miss Fortune",
     "cost": 3,
-    "origin": ["Big Shot","Jazz"]
+    "origin": [
+      "Big Shot",
+      "Jazz"
+    ]
   },
   {
     "name": "Mordekaiser",
     "cost": 3,
-    "origin": ["Sentinel","Pentakill"]
+    "origin": [
+      "Sentinel",
+      "Pentakill"
+    ]
   },
   {
     "name": "Neeko",
     "cost": 3,
-    "origin": ["KD/A","Guardian","Superfan"]
+    "origin": [
+      "K/DA",
+      "Guardian",
+      "Superfan"
+    ]
   },
   {
     "name": "Riven",
     "cost": 3,
-    "origin": ["8-Bit","Edgelord"]
+    "origin": [
+      "8-Bit",
+      "Edgelord"
+    ]
   },
   {
     "name": "Samira",
     "cost": 3,
-    "origin": ["Country","Executioner"]
+    "origin": [
+      "Country",
+      "Executioner"
+    ]
   },
   {
     "name": "Sett",
     "cost": 3,
-    "origin": ["Bruiser","Heartsteel","Mosher"]
+    "origin": [
+      "Bruiser",
+      "Heartsteel",
+      "Mosher"
+    ]
   },
   {
     "name": "Urgot",
     "cost": 3,
-    "origin": ["Country","Mosher"]
+    "origin": [
+      "Country",
+      "Mosher"
+    ]
+  },
+  {
+    "name": "Yone",
+    "cost": 3,
+    "origin": [
+      "Heartsteel",
+      "Edgelord",
+      "Crowd Diver"
+    ]
   },
   {
     "name": "Vex",
     "cost": 3,
-    "origin": ["Executioner","Emo"]
+    "origin": [
+      "Executioner",
+      "Emo"
+    ]
   },
-   {
-      "name": "Ahri",
-      "cost": 4,
-      "origin": ["KD/A","Spellweaver"]
-    },
-    {
-      "name": "Akali K/DA",
-      "cost": 4,
-      "origin": ["KD/A","Executioner","Breakout"]
-    },
-    {
-      "name": "Akali True Damage",
-      "cost": 4,
-      "origin": ["True Damage","Executioner","Breakout"]
-    },
-    {
-      "name": "Blitzcrank",
-      "cost": 4,
-      "origin": []
-    },
-    {
-      "name": "Caitlyn",
-      "cost": 4,
-      "origin": ["8-Bit","Rapidfire"]
-    },
-    {
-      "name": "Ezreal",
-      "cost": 4,
-      "origin": ["Heartsteel","Big Shot"]
-    },
-    {
-      "name": "Kartush",
-      "cost": 4,
-      "origin": ["Executioner","Pentakill"]
-    },
-    {
-      "name": "Poppy",
-      "cost": 4,
-      "origin": ["Emo","Mosher"]
-    },
-    {
-      "name": "Thresh",
-      "cost": 4,
-      "origin": ["Country","Guardian"]
-    },
-    {
-      "name": "Twisted Fate",
-      "cost": 4,
-      "origin": ["Disco","Dazzler"]
-    },
-    {
-      "name": "Viego",
-      "cost": 4,
-      "origin": ["Edgelord","Pentakill"]
-    },
-    {
-      "name": "Zac",
-      "cost": 4,
-      "origin": ["EDM","Bruiser"]
-    },
-    {
-      "name": "Zed",
-      "cost": 4,
-      "origin": ["EDM","Crowd Diver"]
-    },
-     {
-      "name": "Illaoi",
-      "cost": 5,
-      "origin": ["Bruiser","ILLBEATS"]
-    },
-    {
-      "name": "Jhin",
-      "cost": 5,
-      "origin": ["Big Shot","Maestro"]
-    },
-    {
-      "name": "Kayn",
-      "cost": 5,
-      "origin": ["Edgelord","Heartsteel","Wildcard"]
-    },
-    {
-      "name": "Lucian",
-      "cost": 5,
-      "origin": ["Jazz","Rapidfire"]
-    },
-    {
-      "name": "Qiyana",
-      "cost": 5,
-      "origin": ["True Damage","Crowd Diver"]
-    },
-    {
-      "name": "Sona",
-      "cost": 5,
-      "origin": ["Mixmaster","Spellweaver"]
-    },
-    {
-      "name": "Yorick",
-      "cost": 5,
-      "origin": ["Mosher","Guardian","Pentakill"]
-    },
-    {
-      "name": "Ziggs",
-      "cost": 5,
-      "origin": ["Hyberpop","Dazzler"]
-    }
+  {
+    "name": "Ahri",
+    "cost": 4,
+    "origin": [
+      "K/DA",
+      "Spellweaver"
+    ]
+  },
+  {
+    "name": "Akali K/DA",
+    "cost": 4,
+    "origin": [
+      "K/DA",
+      "Executioner",
+      "Breakout"
+    ]
+  },
+  {
+    "name": "Akali True Damage",
+    "cost": 4,
+    "origin": [
+      "True Damage",
+      "Executioner",
+      "Breakout"
+    ]
+  },
+  {
+    "name": "Blitzcrank",
+    "cost": 4,
+    "origin": [
+      "Sentinel",
+      "Disco"
+    ]
+  },
+  {
+    "name": "Caitlyn",
+    "cost": 4,
+    "origin": [
+      "8-Bit",
+      "Rapidfire"
+    ]
+  },
+  {
+    "name": "Ezreal",
+    "cost": 4,
+    "origin": [
+      "Heartsteel",
+      "Big Shot"
+    ]
+  },
+  {
+    "name": "Kartush",
+    "cost": 4,
+    "origin": [
+      "Executioner",
+      "Pentakill"
+    ]
+  },
+  {
+    "name": "Poppy",
+    "cost": 4,
+    "origin": [
+      "Emo",
+      "Mosher"
+    ]
+  },
+  {
+    "name": "Thresh",
+    "cost": 4,
+    "origin": [
+      "Country",
+      "Guardian"
+    ]
+  },
+  {
+    "name": "Twisted Fate",
+    "cost": 4,
+    "origin": [
+      "Disco",
+      "Dazzler"
+    ]
+  },
+  {
+    "name": "Viego",
+    "cost": 4,
+    "origin": [
+      "Edgelord",
+      "Pentakill"
+    ]
+  },
+  {
+    "name": "Zac",
+    "cost": 4,
+    "origin": [
+      "EDM",
+      "Bruiser"
+    ]
+  },
+  {
+    "name": "Zed",
+    "cost": 4,
+    "origin": [
+      "EDM",
+      "Crowd Diver"
+    ]
+  },
+  {
+    "name": "Illaoi",
+    "cost": 5,
+    "origin": [
+      "Bruiser",
+      "ILLBEATS"
+    ]
+  },
+  {
+    "name": "Jhin",
+    "cost": 5,
+    "origin": [
+      "Big Shot",
+      "Maestro"
+    ]
+  },
+  {
+    "name": "Kayn",
+    "cost": 5,
+    "origin": [
+      "Edgelord",
+      "Heartsteel",
+      "Wildcard"
+    ]
+  },
+  {
+    "name": "Lucian",
+    "cost": 5,
+    "origin": [
+      "Jazz",
+      "Rapidfire"
+    ]
+  },
+  {
+    "name": "Qiyana",
+    "cost": 5,
+    "origin": [
+      "True Damage",
+      "Crowd Diver"
+    ]
+  },
+  {
+    "name": "Sona",
+    "cost": 5,
+    "origin": [
+      "Mixmaster",
+      "Spellweaver"
+    ]
+  },
+  {
+    "name": "Yorick",
+    "cost": 5,
+    "origin": [
+      "Mosher",
+      "Guardian",
+      "Pentakill"
+    ]
+  },
+  {
+    "name": "Ziggs",
+    "cost": 5,
+    "origin": [
+      "Hyperpop",
+      "Dazzler"
+    ]
+  }
 ]

@@ -15,9 +15,11 @@ import com.portal.tftteambuilderproject.utilities.helper.Util
 
 class ChampsAdapter(
     private val context: Context,
-    private val championClicked: (ChampionItem) -> Unit
+    private val selectedChampionsChanged: (List<ChampionItem>) -> Unit
+
 ) :
     RecyclerView.Adapter<ChampsAdapter.ChampsViewHolder>() {
+    private var selectedChampions: MutableList<ChampionItem> = mutableListOf()
     private var items: MutableList<ChampionItem> = mutableListOf()
 
 
@@ -36,10 +38,15 @@ class ChampsAdapter(
                     ivChamp.setImageResource(champion.imagePath)
                     tvChamp.setText(champion.championName)
                     ivChamp.setOnClickListener {
-                        championClicked.invoke(item)
+                        toggleSelection(item)
                     }
 
-                    ivChamp.setBackgroundColor(ContextCompat.getColor(context,setCardBackgroundColorByCost(item.cost)))
+                    ivChamp.setBackgroundColor(
+                        ContextCompat.getColor(
+                            context,
+                            setCardBackgroundColorByCost(item.cost)
+                        )
+                    )
                 }
             }
         }
@@ -68,13 +75,40 @@ class ChampsAdapter(
 
     private fun setCardBackgroundColorByCost(cost: Int): Int {
         val colorResId = when (cost) {
-            1 -> R.color.one_cost
-            2 -> R.color.two_cost
-            3 -> R.color.three_cost
-            4 -> R.color.four_cost
-            5 -> R.color.five_cost
+            ONE_COST -> R.color.one_cost
+            TWO_COST -> R.color.two_cost
+            THREE_COST -> R.color.three_cost
+            FOUR_COST -> R.color.four_cost
+            FIVE_COST -> R.color.five_cost
             else -> R.color.black
         }
         return colorResId
+    }
+
+    fun getSelectedChampions(): List<ChampionItem> {
+        return selectedChampions.toList()
+    }
+
+    fun clearSelection() {
+        selectedChampions.clear()
+        notifyDataSetChanged()
+    }
+
+    private fun toggleSelection(championItem: ChampionItem) {
+        if (selectedChampions.contains(championItem)) {
+            selectedChampions.remove(championItem)
+        } else {
+            selectedChampions.add(championItem)
+        }
+        selectedChampionsChanged.invoke(selectedChampions)
+        notifyDataSetChanged()
+    }
+
+    companion object {
+        const val ONE_COST = 1
+        const val TWO_COST = 2
+        const val THREE_COST = 3
+        const val FOUR_COST = 4
+        const val FIVE_COST = 5
     }
 }

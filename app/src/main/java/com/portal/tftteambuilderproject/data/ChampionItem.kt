@@ -6,3 +6,10 @@ data class ChampionItem(
     val origin: List<String>,
 )
 
+fun List<ChampionItem>.collectOrigins(): List<String> {
+    val origins = mutableListOf<String>()
+    forEach { championItem ->
+        origins.addAll(championItem.origin)
+    }
+    return origins
+}

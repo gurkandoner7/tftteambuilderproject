@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/dimen_2dp">
+
+    <com.portal.tftteambuilderproject.utilities.customviews.TftCustomTextView
+        android:id="@+id/tvOriginName"
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_marginHorizontal="@dimen/dimen_4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:textAlignment="center"
+        tools:text="app" />
+
+    <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+        android:id="@+id/cardViewOrigin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvOriginName">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivOrigin"
+            android:layout_width="@dimen/dimen_60dp"
+            android:layout_height="@dimen/dimen_60dp"
+            android:padding="@dimen/dimen_8dp"
+            android:src="@drawable/ic_big_shot" />
+
+
+    </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+    <com.portal.tftteambuilderproject.utilities.customviews.TftCustomTextView
+        android:id="@+id/tvOriginCount"
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/ts_16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardViewOrigin"
+        app:textAlignment="center"
+        tools:text="text" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

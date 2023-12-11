@@ -83,6 +83,16 @@
     <color name="three_cost">#58B4F6</color>
     <color name="four_cost">#AF36BF</color>
     <color name="five_cost">#FFDC42</color>
+    <color name="origin_color">#bd9e59</color>
+
+
+    <color name="level_zero">#8A878787</color>
+    <color name="level_one">#9E5700</color>
+    <color name="level_two">#AAAAAA</color>
+    <color name="level_three">#FFDC42</color>
+    <color name="level_four">#E91E63</color>
+    <color name="icon_color">#FFFFFF</color>
+    <color name="level_unique">#D30000</color>
 
 
 </resources>
