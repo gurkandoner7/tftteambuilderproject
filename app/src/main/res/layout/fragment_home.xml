@@ -21,8 +21,9 @@
         app:textAlignment="center"
         app:textType="Bold" />
 
-    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
-        android:id="@+id/etAutoComplete"
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etFilter"
         style="@style/AutoCompleteTextViewStyle"
         android:layout_width="@dimen/dimen_0dp"
         android:layout_height="wrap_content"
@@ -38,10 +39,10 @@
         android:id="@+id/radioGroupFilter"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/dimen_30dp"
-        android:layout_marginStart="@dimen/dimen_8dp"
+        android:layout_marginStart="@dimen/dimen_42dp"
         android:background="@drawable/bg_cards"
         android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="@id/rvChamps"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rvChamps">
 
         <com.google.android.material.radiobutton.MaterialRadioButton
@@ -93,7 +94,7 @@
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etAutoComplete"
+        app:layout_constraintTop_toBottomOf="@id/etFilter"
         tools:listitem="@layout/item_champs" />
 
 
@@ -101,7 +102,7 @@
         android:id="@+id/rvSelectedChamps"
         android:layout_width="@dimen/dimen_0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dimen_8dp"
+        android:layout_marginTop="@dimen/dimen_16dp"
         android:background="@drawable/bg_cards"
         android:orientation="horizontal"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
@@ -126,11 +127,12 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvOrigin"
         android:layout_width="@dimen/dimen_0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/dimen_0dp"
+        android:layout_marginVertical="@dimen/dimen_24dp"
         android:background="@drawable/bg_cards"
-        android:layout_marginTop="@dimen/dimen_16dp"
         android:orientation="horizontal"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/rvChamps"
         app:layout_constraintStart_toStartOf="@+id/rvChamps"
         app:layout_constraintTop_toBottomOf="@+id/rvSelectedChamps"

@@ -10,7 +10,9 @@ import com.portal.tftteambuilderproject.compose.viewBinding
 import com.portal.tftteambuilderproject.data.ChampionItem
 import com.portal.tftteambuilderproject.data.collectOrigins
 import com.portal.tftteambuilderproject.utilities.extensions.readChampionsFromJson
+import com.portal.tftteambuilderproject.utilities.extensions.setFilterListeners
 import com.portal.tftteambuilderproject.utilities.extensions.setGridLayoutSize
+import com.portal.tftteambuilderproject.utilities.extensions.setSearchTextChangeListener
 import kotlinx.coroutines.launch
 
 class HomeFragment : BaseFragment(R.layout.fragment_home) {
@@ -24,8 +26,12 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
     override fun observeVariables() {
         lifecycleScope.launchWhenStarted {
             launch {
-                homeViewModel.championList.collect {
-                    champsAdapter.addItem(it)
+                homeViewModel.championList.collect { championItem ->
+                    champsAdapter.addItem(championItem)
+                    binding.apply {
+                        radioGroupFilter.setFilterListeners(champsAdapter, championItem, binding.tvClearFilters)
+                        etFilter.setSearchTextChangeListener(championItem, champsAdapter)
+                    }
                 }
             }
         }
@@ -34,13 +40,12 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
 
     override fun initUI(savedInstanceState: Bundle?) {
 
-        champsAdapter = ChampsAdapter(requireContext(),
-            selectedChampionsChanged = { championList ->
-                updateList(championList)
-                selectedChampsAdapter.updateSelectedChampions(championList)
-            })
-        selectedChampsAdapter = SelectedChampsAdapter(requireContext(),
-            removeChamps = { championList ->
+        champsAdapter = ChampsAdapter(requireContext(), selectedChampionsChanged = { championList ->
+            updateList(championList)
+            selectedChampsAdapter.updateSelectedChampions(championList)
+        })
+        selectedChampsAdapter =
+            SelectedChampsAdapter(requireContext(), removeChamps = { championList ->
                 updateList(championList)
                 champsAdapter.updateSelectedChampions(championList)
             })
@@ -51,8 +56,9 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
         homeViewModel.setChampionList(requireContext().readChampionsFromJson())
         binding.rvChamps.setGridLayoutSize(6)
         binding.rvOrigin.setGridLayoutSize(6)
-        originAdapter = OriginAdapter (requireContext())
+        originAdapter = OriginAdapter(requireContext())
         binding.rvOrigin.adapter = originAdapter
+
     }
 
 

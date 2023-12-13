@@ -19,7 +19,7 @@
 
     <style name="Widget.Shrine.Button" parent="Widget.MaterialComponents.Button">
         <item name="android:textColor">@color/textColorOppositePrimary</item>
-        <item name="backgroundTint">?attr/colorPrimary</item>
+        <item name="backgroundTint">#00980F</item>
     </style>
 
     <style name="FormSingleButton" parent="Widget.Shrine.Button">

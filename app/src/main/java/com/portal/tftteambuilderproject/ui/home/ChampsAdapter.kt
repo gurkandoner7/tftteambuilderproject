@@ -24,6 +24,7 @@ class ChampsAdapter(
     private var items: MutableList<ChampionItem> = mutableListOf()
 
     fun addItem(newItems: List<ChampionItem>) {
+        items.clear()
         items.addAll(newItems)
         notifyDataSetChanged()
     }

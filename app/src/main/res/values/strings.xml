@@ -7,4 +7,5 @@
     <string name="origincounttext">%%%/+++</string>
     <string name="search">Origin, Class or Champion</string>
     <string name="clear_filters">Clear Filters</string>
+    <string name="comp_builder">Comp Builder</string>
 </resources>
