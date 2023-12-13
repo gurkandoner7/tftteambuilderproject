@@ -61,9 +61,6 @@ class NetworkModule {
             .build()
     }
 
-/*    @Provides
-    @Singleton
-    fun provideBaseUrl() = WeatherService.BASE_URL*/
 
     @Provides
     @Singleton
