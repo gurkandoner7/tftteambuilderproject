@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.portal.tftteambuilder.R
 import com.portal.tftteambuilder.databinding.ItemChampsBinding
 import com.portal.tftteambuilderproject.data.ChampionItem
+import com.portal.tftteambuilderproject.utilities.customviews.TftCustomToast
 import com.portal.tftteambuilderproject.utilities.helper.Util
 
 @SuppressLint("NotifyDataSetChanged")
@@ -22,12 +23,16 @@ class ChampsAdapter(
     private var selectedChampions: MutableList<ChampionItem> = mutableListOf()
     private var items: MutableList<ChampionItem> = mutableListOf()
 
-
     fun addItem(newItems: List<ChampionItem>) {
         items.addAll(newItems)
         notifyDataSetChanged()
     }
 
+    fun updateSelectedChampions(champions: List<ChampionItem>) {
+        selectedChampions.clear()
+        selectedChampions.addAll(champions)
+        notifyDataSetChanged()
+    }
 
     inner class ChampsViewHolder(private val binding: ItemChampsBinding) :
         RecyclerView.ViewHolder(binding.root) {
@@ -40,13 +45,27 @@ class ChampsAdapter(
                     ivChamp.setOnClickListener {
                         toggleSelection(item)
                     }
-
                     ivChamp.setBackgroundColor(
                         ContextCompat.getColor(
                             context,
                             setCardBackgroundColorByCost(item.cost)
                         )
                     )
+
+                    ivChamp.setOnLongClickListener { view ->
+
+                        val matchingOrigins =
+                            Util.Origin.values().filter { it.feature in item.origin }
+                        if (matchingOrigins.isNotEmpty()) {
+                            TftCustomToast.showToast(
+                                context,
+                                matchingOrigins.joinToString("\n") { it.feature },
+                                view
+                            )
+                        }
+
+                        true
+                    }
                 }
             }
         }
@@ -85,14 +104,6 @@ class ChampsAdapter(
         return colorResId
     }
 
-    fun getSelectedChampions(): List<ChampionItem> {
-        return selectedChampions.toList()
-    }
-
-    fun clearSelection() {
-        selectedChampions.clear()
-        notifyDataSetChanged()
-    }
 
     private fun toggleSelection(championItem: ChampionItem) {
         if (selectedChampions.contains(championItem)) {

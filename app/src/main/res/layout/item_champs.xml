@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
+    android:id="@+id/clRecyclerView"
     android:layout_height="wrap_content"
-    android:background="@null"
     android:layout_margin="@dimen/dimen_2dp"
-    >
+    android:background="@null">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
@@ -21,21 +21,19 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-
-            <androidx.appcompat.widget.AppCompatImageView
+            <androidx.appcompat.widget.AppCompatImageButton
                 android:id="@+id/ivChamp"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="@dimen/dimen_45dp"
+                android:layout_height="@dimen/dimen_45dp"
                 android:layout_gravity="center"
+                android:elevation="@dimen/dimen_8dp"
                 android:padding="@dimen/dimen_2dp"
                 android:scaleType="fitXY"
-                android:elevation="@dimen/dimen_8dp"
                 android:src="@drawable/ahri"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -44,13 +42,13 @@
     <com.portal.tftteambuilderproject.utilities.customviews.TftCustomTextView
         android:id="@+id/tvChamp"
         android:layout_width="@dimen/dimen_0dp"
-        app:textAlignment="center"
         android:layout_height="wrap_content"
         android:background="@null"
-        android:textSize="@dimen/ts_10sp"
+        android:textSize="@dimen/ts_11sp"
         app:layout_constraintEnd_toEndOf="@+id/cardView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:textAlignment="center"
         app:textType="Medium"
         tools:text="Ahri" />
 

@@ -23,13 +23,15 @@ class OriginAdapter(
         originCounts = newItems.groupingBy { it }.eachCount()
         items.clear()
         items.addAll(originCounts.keys)
-        originList = originCounts.toList().sortedWith(compareByDescending<Pair<String, Int>> { it.second }
-            .thenByDescending { origin ->
+        originList = originCounts.toList()
+            .sortedWith(compareByDescending<Pair<String, Int>> { it.second }.thenByDescending { origin ->
                 val originEnum = Util.Origin.values().find { it.feature == origin.first }
                 originEnum?.triggerFrequency?.indexOfFirst { origin.second >= it } ?: -1
             })
         notifyDataSetChanged()
-    }    inner class OriginViewHolder(private val binding: ItemOriginBinding) :
+    }
+
+    inner class OriginViewHolder(private val binding: ItemOriginBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(item: String) {
             val originItem = originList.find { it.first == item }
@@ -55,8 +57,7 @@ class OriginAdapter(
                         ivOrigin.setImageResource(originEnum.imagePath)
                         ivOrigin.setBackgroundColor(
                             ContextCompat.getColor(
-                                context,
-                                getLevelColor(level)
+                                context, getLevelColor(level)
                             )
                         )
                     }
@@ -68,13 +69,13 @@ class OriginAdapter(
                         tvOriginCount.setText("$count")
                         ivOrigin.setBackgroundColor(
                             ContextCompat.getColor(
-                                context,
-                                R.color.level_unique
+                                context, R.color.level_unique
                             )
                         )
                     }
                 }
             }
+
         }
     }
 
@@ -112,10 +113,6 @@ class OriginAdapter(
     }
 
     enum class Level {
-        ZERO,
-        ONE,
-        TWO,
-        THREE,
-        FOUR,
+        ZERO, ONE, TWO, THREE, FOUR,
     }
 }

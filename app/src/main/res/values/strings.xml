@@ -5,4 +5,6 @@
     <string name="title_notifications">Notifications</string>
     <string name="tft_team_nbuilder">TFT Team \nBuilder</string>
     <string name="origincounttext">%%%/+++</string>
+    <string name="search">Origin, Class or Champion</string>
+    <string name="clear_filters">Clear Filters</string>
 </resources>

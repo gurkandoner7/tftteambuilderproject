@@ -4,14 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_homepage"
+    android:background="@drawable/background_tft"
     tools:context="com.portal.tftteambuilderproject.ui.home.HomeFragment">
 
-    <com.portal.tftteambuilderproject.utilities.customviews.TftCustomTextView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/tvHeader"
         android:layout_width="@dimen/dimen_0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dimen_36dp"
+        android:layout_height="@dimen/dimen_120dp"
+        android:layout_marginTop="@dimen/dimen_32dp"
+        android:src="@drawable/tftlogo"
         android:text="@string/tft_team_nbuilder"
         android:textSize="@dimen/ts_32sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,33 +21,119 @@
         app:textAlignment="center"
         app:textType="Bold" />
 
+    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+        android:id="@+id/etAutoComplete"
+        style="@style/AutoCompleteTextViewStyle"
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_36dp"
+        android:drawableEnd="@drawable/ic_search"
+        android:hint="@string/search"
+        android:popupTheme="@style/PopupMenuStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvHeader" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen_30dp"
+        android:layout_marginStart="@dimen/dimen_8dp"
+        android:background="@drawable/bg_cards"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@id/rvChamps"
+        app:layout_constraintTop_toBottomOf="@+id/rvChamps">
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/rbOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            app:buttonTint="@color/one_cost" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/rbTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            app:buttonTint="@color/two_cost" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/rbThree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            app:buttonTint="@color/three_cost" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/rbFour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            app:buttonTint="@color/four_cost" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/rbFive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            app:buttonTint="@color/five_cost" />
+
+
+    </RadioGroup>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvChamps"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dimen_0dp"
-        android:layout_marginHorizontal="@dimen/dimen_36dp"
-        android:layout_marginTop="@dimen/dimen_16dp"
-        android:layout_marginBottom="@dimen/dimen_36dp"
+        android:layout_height="@dimen/dimen_250dp"
+        android:layout_marginHorizontal="@dimen/dimen_18dp"
+        android:layout_marginTop="@dimen/dimen_8dp"
         android:background="@drawable/bg_cards"
+        android:padding="@dimen/dimen_12dp"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:layout_constraintBottom_toTopOf="@+id/rvOrigin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvHeader"
+        app:layout_constraintTop_toBottomOf="@id/etAutoComplete"
         tools:listitem="@layout/item_champs" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSelectedChamps"
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_8dp"
+        android:background="@drawable/bg_cards"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="@id/rvChamps"
+        app:layout_constraintStart_toStartOf="@id/rvChamps"
+        app:layout_constraintTop_toBottomOf="@id/tvClearFilters"
+        tools:listitem="@layout/item_champs" />
+
+    <com.portal.tftteambuilderproject.utilities.customviews.TftCustomTextView
+        android:id="@+id/tvClearFilters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimen_10dp"
+        android:padding="@dimen/dimen_6dp"
+        android:text="@string/clear_filters"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/radioGroupFilter"
+        app:layout_constraintEnd_toEndOf="@id/rvChamps"
+        app:layout_constraintTop_toBottomOf="@id/rvChamps" />
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvOrigin"
         android:layout_width="@dimen/dimen_0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/dimen_60dp"
         android:background="@drawable/bg_cards"
+        android:layout_marginTop="@dimen/dimen_16dp"
         android:orientation="horizontal"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:layout_constraintEnd_toEndOf="@id/rvChamps"
-
         app:layout_constraintStart_toStartOf="@+id/rvChamps"
+        app:layout_constraintTop_toBottomOf="@+id/rvSelectedChamps"
         tools:listitem="@layout/item_origin" />
 
 

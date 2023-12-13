@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="@color/bgStartColor"/>
+    <solid android:color="@color/bgStartColor" />
     <gradient
-        android:centerColor="@color/bgStartColor"
-        android:endColor="#8A008A"
-        android:startColor="#8A008A"
-        />
-    <corners android:radius="@dimen/dimen_16dp"/>
+        android:centerColor="#BF4A4A4A"
+        android:endColor="#E6393939"
+        android:startColor="#E6393939" />
+    <corners android:radius="4dp" />
+
 </shape>
